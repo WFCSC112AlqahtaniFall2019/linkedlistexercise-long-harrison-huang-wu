@@ -37,9 +37,27 @@ int main() {
         }
         current = current -> getNext();
     }
-    cout << "Current Min:" << currentMin << endl;
+    cout << "Current Min:" << currentMin << endl << endl;
 
     //2) remove the 4th node from the list
+    current = head;
+    current = current -> getNext();
+    current = current -> getNext();
+    current = current -> getNext();
+    Node *temp = current;
+    current = current -> getNext();
+
+    current->InsertAfter(temp);
+    delete temp;
+
+    current = head;
+    current = current -> getNext();
+    while(current!=nullptr)
+    {
+        current->printNode();
+        current=current->getNext();
+    }
+    
 
     //3) remove the last node
 
