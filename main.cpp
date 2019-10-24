@@ -41,7 +41,7 @@ int main() {
         }
         current = current -> getNext();
     }
-    //cout << endl << "q1:" << endl;
+    cout << endl << "q1:" << endl;
 
     cout << "Current Min:" << currentMin << endl << endl;
 
@@ -58,6 +58,8 @@ int main() {
 
     current = head;
     current = current -> getNext();
+    cout << endl << "q2:" << endl;
+
     while(current!=nullptr)
     {
         current->printNode();
@@ -110,19 +112,20 @@ int main() {
     //5) delete all nodes
 /*
 delete head;*/
-//    current = head->getNext();
-//    Node *rest = head -> getNext();
-//while (current != nullptr){
-//    rest = rest -> getNext();
-//    delete rest;
-//}
-//
-//    cout << endl << "q5:" << endl;
-//    current = head->getNext();
-//    while(current!=nullptr)
-//    {
-//        current->printNode();
-//        current=current->getNext();
-//    }
-//    return 0;
-//}
+    current = head;
+    Node *rest = head -> getNext();
+while (current ->getNext() != nullptr){
+    rest = rest -> getNext();
+    delete rest;
+
+}
+
+    cout << endl << "q5:" << endl;
+    current = head->getNext();
+    while(current!=nullptr)
+    {
+        current->printNode();
+        current=current->getNext();
+    }
+    return 0;
+}
