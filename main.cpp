@@ -84,19 +84,22 @@ int main() {
 
 
     //4) remove the first node
-   /* current = current->getNext()->getNext();
-    Node * first = head->getNext();
+    Node *first = head;
+    head=head->getNext();
+    first->setNext(nullptr);
     delete first;
+
 
     cout << endl << "q4:" << endl;
 
-    current = head->getNext();
+    current = head;
+    current = current->getNext();
     while(current!=nullptr)
     {
         current->printNode();
         current=current->getNext();
     }
-*/
+
 
     //5) delete all nodes
     return 0;
