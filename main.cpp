@@ -29,14 +29,20 @@ int main() {
     }
 
     //1) find the node that has the minimum value
-    current= head;
-    int currentMin = current -> getValue();
+    //current -> getNext -> getValue() !=
+    current= head -> getNext() ;
+    int currentMin = current-> getValue();
+
+
+
     while(current!= nullptr){
         if (current -> getValue() < currentMin){
             currentMin = current -> getValue();
         }
         current = current -> getNext();
     }
+    //cout << endl << "q1:" << endl;
+
     cout << "Current Min:" << currentMin << endl << endl;
 
     //2) remove the 4th node from the list
@@ -102,5 +108,21 @@ int main() {
 
 
     //5) delete all nodes
-    return 0;
-}
+/*
+delete head;*/
+//    current = head->getNext();
+//    Node *rest = head -> getNext();
+//while (current != nullptr){
+//    rest = rest -> getNext();
+//    delete rest;
+//}
+//
+//    cout << endl << "q5:" << endl;
+//    current = head->getNext();
+//    while(current!=nullptr)
+//    {
+//        current->printNode();
+//        current=current->getNext();
+//    }
+//    return 0;
+//}
