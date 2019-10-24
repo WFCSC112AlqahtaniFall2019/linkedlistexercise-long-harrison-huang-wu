@@ -57,9 +57,31 @@ int main() {
         current->printNode();
         current=current->getNext();
     }
-    
+
 
     //3) remove the last node
+
+    current = head;
+
+   while (current -> getNext() ->getNext() != nullptr)
+   {
+       current = current->getNext();
+   }
+
+    Node * blah = current;
+    blah -> setNext(NULL);
+    
+    cout << endl << "q3:" << endl;
+
+    current = head -> getNext();
+
+    while(current!=nullptr)
+    {
+        current->printNode();
+        current=current->getNext();
+    }
+
+
 
     //4) remove the first node
 
