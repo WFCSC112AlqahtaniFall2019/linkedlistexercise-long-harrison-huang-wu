@@ -62,15 +62,15 @@ int main() {
     //3) remove the last node
 
     current = head;
-
    while (current -> getNext() ->getNext() != nullptr)
    {
        current = current->getNext();
    }
-
+   Node * lastGarbage = current->getNext()->getNext();
+   delete lastGarbage;
     Node * blah = current;
     blah -> setNext(NULL);
-    
+
     cout << endl << "q3:" << endl;
 
     current = head -> getNext();
@@ -84,7 +84,20 @@ int main() {
 
 
     //4) remove the first node
+   /* current = current->getNext()->getNext();
+    Node * first = head->getNext();
+    delete first;
 
-    //6) delete all nodes
+    cout << endl << "q4:" << endl;
+
+    current = head->getNext();
+    while(current!=nullptr)
+    {
+        current->printNode();
+        current=current->getNext();
+    }
+*/
+
+    //5) delete all nodes
     return 0;
 }
